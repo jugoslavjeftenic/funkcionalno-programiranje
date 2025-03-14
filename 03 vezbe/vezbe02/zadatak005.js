@@ -1,13 +1,26 @@
-// let tekst = "AJa sam tekst";
-let tekst = "J sm tkst";
-let samoglasnici = ['a', 'e', 'i', 'o', 'u'];
-
-outerloop: for (let i = 0; i < tekst.length; i++) {
-    for (let j = 0; j < samoglasnici.length; j++) {
-        // if (samoglasnici[j] == tekst[i]) {
-        if (samoglasnici[j].toLowerCase() == tekst[i].toLowerCase()) {
-            console.log("imagi");
-            break outerloop;
-        }
+function sracunajOcenu(brojBodova) {
+    if (brojBodova > 90) {
+        return 10;
+    }
+    else if (brojBodova > 80) {
+        return 9;
+    }
+    else if (brojBodova > 70) {
+        return 8;
+    }
+    else if (brojBodova > 60) {
+        return 7;
+    }
+    else if (brojBodova > 50) {
+        return 6;
+    }
+    else {
+        return "Nedovoljan";
     }
 }
+
+function sracunajOcene(listaBodova) {
+    return listaBodova.map(sracunajOcenu);
+}
+
+console.log(sracunajOcene([40, 50, 51, 65, 82, 91, 115]));
