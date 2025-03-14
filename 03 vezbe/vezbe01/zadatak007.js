@@ -1,16 +1,9 @@
-let label = document.createElement('label');
-
-let deljenik = 7168;
+let broj = 7168;
 let brojac = 0;
 
-while (true) {
-    if (deljenik >= 2 && deljenik % 2 === 0) {
-        deljenik /= 2;
-        brojac++;
-    } else {
-        break;
-    }
+while (broj % 2 == 0) {
+    broj /= 2;
+    brojac++;
 }
 
-label.textContent = brojac;
-document.body.appendChild(label);
+console.log(brojac);

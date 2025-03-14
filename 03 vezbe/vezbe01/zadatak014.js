@@ -1,5 +1,2 @@
-const cenaKarte = 300.00;
-const godinePutnika = 70;
-if (godinePutnika < 18 || godinePutnika > 60) {
-    alert("cena karte je " + cenaKarte / 2);
-}
+let a = false || alert("evaluiram prvi deo!");
+let b = true || alert("evaluiram drugi deo!");
