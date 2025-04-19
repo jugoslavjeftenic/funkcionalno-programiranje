@@ -28,6 +28,8 @@ corolla.vozi();
 
 Object.getPrototypeOf(Object.getPrototypeOf(corolla)).vozi = () => console.log("Korolin brm brm u vozilu");
 vozilo.vozi();
+corolla.__proto__.__proto__.vozi = () => console.log("Korolin drugi brm brm u vozilu");
+vozilo.vozi();
 
 console.log(Object.getPrototypeOf(corolla));
 console.log(Object.getPrototypeOf(toyota));
